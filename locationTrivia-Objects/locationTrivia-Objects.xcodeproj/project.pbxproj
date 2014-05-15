@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9E4F28886CA4BF98C947665 /* libPods-locationTrivia-ObjectsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0528C159F79489BA56C3983 /* libPods-locationTrivia-ObjectsTests.a */; };
+		D83BACF5192537C20032B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BACF4192537C20032B44E /* Foundation.framework */; };
+		D83BACF7192537C20032B44E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BACF6192537C20032B44E /* CoreGraphics.framework */; };
+		D83BACF9192537C20032B44E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BACF8192537C20032B44E /* UIKit.framework */; };
+		D83BACFF192537C20032B44E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D83BACFD192537C20032B44E /* InfoPlist.strings */; };
+		D83BAD01192537C20032B44E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BAD00192537C20032B44E /* main.m */; };
+		D83BAD05192537C20032B44E /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BAD04192537C20032B44E /* FISAppDelegate.m */; };
+		D83BAD07192537C20032B44E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83BAD06192537C20032B44E /* Images.xcassets */; };
+		D83BAD0E192537C20032B44E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BAD0D192537C20032B44E /* XCTest.framework */; };
+		D83BAD0F192537C20032B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BACF4192537C20032B44E /* Foundation.framework */; };
+		D83BAD10192537C20032B44E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83BACF8192537C20032B44E /* UIKit.framework */; };
+		D83BAD18192537C20032B44E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D83BAD16192537C20032B44E /* InfoPlist.strings */; };
+		D83BAD24192545130032B44E /* FISAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BAD23192545130032B44E /* FISAppDelegateSpec.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D83BAD11192537C20032B44E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D83BACE9192537C20032B44E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D83BACF0192537C20032B44E;
+			remoteInfo = "locationTrivia-Objects";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25D5F71C500449CFA47097EC /* Pods-locationTrivia-ObjectsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locationTrivia-ObjectsTests.xcconfig"; path = "Pods/Pods-locationTrivia-ObjectsTests.xcconfig"; sourceTree = "<group>"; };
+		C0528C159F79489BA56C3983 /* libPods-locationTrivia-ObjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-locationTrivia-ObjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BACF1192537C20032B44E /* locationTrivia-Objects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "locationTrivia-Objects.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BACF4192537C20032B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D83BACF6192537C20032B44E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D83BACF8192537C20032B44E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D83BACFC192537C20032B44E /* locationTrivia-Objects-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "locationTrivia-Objects-Info.plist"; sourceTree = "<group>"; };
+		D83BACFE192537C20032B44E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D83BAD00192537C20032B44E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D83BAD02192537C20032B44E /* locationTrivia-Objects-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "locationTrivia-Objects-Prefix.pch"; sourceTree = "<group>"; };
+		D83BAD03192537C20032B44E /* FISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
+		D83BAD04192537C20032B44E /* FISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
+		D83BAD06192537C20032B44E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D83BAD0C192537C20032B44E /* locationTrivia-ObjectsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "locationTrivia-ObjectsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BAD0D192537C20032B44E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D83BAD15192537C20032B44E /* locationTrivia-ObjectsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "locationTrivia-ObjectsTests-Info.plist"; sourceTree = "<group>"; };
+		D83BAD17192537C20032B44E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D83BAD23192545130032B44E /* FISAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegateSpec.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D83BACEE192537C20032B44E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BACF7192537C20032B44E /* CoreGraphics.framework in Frameworks */,
+				D83BACF9192537C20032B44E /* UIKit.framework in Frameworks */,
+				D83BACF5192537C20032B44E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BAD09192537C20032B44E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BAD0E192537C20032B44E /* XCTest.framework in Frameworks */,
+				D83BAD10192537C20032B44E /* UIKit.framework in Frameworks */,
+				D83BAD0F192537C20032B44E /* Foundation.framework in Frameworks */,
+				A9E4F28886CA4BF98C947665 /* libPods-locationTrivia-ObjectsTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D83BACE8192537C20032B44E = {
+			isa = PBXGroup;
+			children = (
+				D83BACFA192537C20032B44E /* locationTrivia-Objects */,
+				D83BAD13192537C20032B44E /* locationTrivia-ObjectsTests */,
+				D83BACF3192537C20032B44E /* Frameworks */,
+				D83BACF2192537C20032B44E /* Products */,
+				25D5F71C500449CFA47097EC /* Pods-locationTrivia-ObjectsTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		D83BACF2192537C20032B44E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D83BACF1192537C20032B44E /* locationTrivia-Objects.app */,
+				D83BAD0C192537C20032B44E /* locationTrivia-ObjectsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D83BACF3192537C20032B44E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D83BACF4192537C20032B44E /* Foundation.framework */,
+				D83BACF6192537C20032B44E /* CoreGraphics.framework */,
+				D83BACF8192537C20032B44E /* UIKit.framework */,
+				D83BAD0D192537C20032B44E /* XCTest.framework */,
+				C0528C159F79489BA56C3983 /* libPods-locationTrivia-ObjectsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D83BACFA192537C20032B44E /* locationTrivia-Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D83BAD03192537C20032B44E /* FISAppDelegate.h */,
+				D83BAD04192537C20032B44E /* FISAppDelegate.m */,
+				D83BAD06192537C20032B44E /* Images.xcassets */,
+				D83BACFB192537C20032B44E /* Supporting Files */,
+			);
+			path = "locationTrivia-Objects";
+			sourceTree = "<group>";
+		};
+		D83BACFB192537C20032B44E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D83BACFC192537C20032B44E /* locationTrivia-Objects-Info.plist */,
+				D83BACFD192537C20032B44E /* InfoPlist.strings */,
+				D83BAD00192537C20032B44E /* main.m */,
+				D83BAD02192537C20032B44E /* locationTrivia-Objects-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D83BAD13192537C20032B44E /* locationTrivia-ObjectsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D83BAD23192545130032B44E /* FISAppDelegateSpec.m */,
+				D83BAD14192537C20032B44E /* Supporting Files */,
+			);
+			path = "locationTrivia-ObjectsTests";
+			sourceTree = "<group>";
+		};
+		D83BAD14192537C20032B44E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D83BAD15192537C20032B44E /* locationTrivia-ObjectsTests-Info.plist */,
+				D83BAD16192537C20032B44E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D83BACF0192537C20032B44E /* locationTrivia-Objects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83BAD1D192537C20032B44E /* Build configuration list for PBXNativeTarget "locationTrivia-Objects" */;
+			buildPhases = (
+				D83BACED192537C20032B44E /* Sources */,
+				D83BACEE192537C20032B44E /* Frameworks */,
+				D83BACEF192537C20032B44E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "locationTrivia-Objects";
+			productName = "locationTrivia-Objects";
+			productReference = D83BACF1192537C20032B44E /* locationTrivia-Objects.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D83BAD0B192537C20032B44E /* locationTrivia-ObjectsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83BAD20192537C20032B44E /* Build configuration list for PBXNativeTarget "locationTrivia-ObjectsTests" */;
+			buildPhases = (
+				28AF0E051FA748D1A1E64EC1 /* Check Pods Manifest.lock */,
+				D83BAD08192537C20032B44E /* Sources */,
+				D83BAD09192537C20032B44E /* Frameworks */,
+				D83BAD0A192537C20032B44E /* Resources */,
+				15A026A57E0C4ED1A679AA0D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D83BAD12192537C20032B44E /* PBXTargetDependency */,
+			);
+			name = "locationTrivia-ObjectsTests";
+			productName = "locationTrivia-ObjectsTests";
+			productReference = D83BAD0C192537C20032B44E /* locationTrivia-ObjectsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D83BACE9192537C20032B44E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FIS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joe Burgess";
+				TargetAttributes = {
+					D83BAD0B192537C20032B44E = {
+						TestTargetID = D83BACF0192537C20032B44E;
+					};
+				};
+			};
+			buildConfigurationList = D83BACEC192537C20032B44E /* Build configuration list for PBXProject "locationTrivia-Objects" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D83BACE8192537C20032B44E;
+			productRefGroup = D83BACF2192537C20032B44E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D83BACF0192537C20032B44E /* locationTrivia-Objects */,
+				D83BAD0B192537C20032B44E /* locationTrivia-ObjectsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D83BACEF192537C20032B44E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BACFF192537C20032B44E /* InfoPlist.strings in Resources */,
+				D83BAD07192537C20032B44E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BAD0A192537C20032B44E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BAD18192537C20032B44E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15A026A57E0C4ED1A679AA0D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-locationTrivia-ObjectsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28AF0E051FA748D1A1E64EC1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D83BACED192537C20032B44E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BAD01192537C20032B44E /* main.m in Sources */,
+				D83BAD05192537C20032B44E /* FISAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BAD08192537C20032B44E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BAD24192545130032B44E /* FISAppDelegateSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D83BAD12192537C20032B44E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D83BACF0192537C20032B44E /* locationTrivia-Objects */;
+			targetProxy = D83BAD11192537C20032B44E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D83BACFD192537C20032B44E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D83BACFE192537C20032B44E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D83BAD16192537C20032B44E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D83BAD17192537C20032B44E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D83BAD1B192537C20032B44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D83BAD1C192537C20032B44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D83BAD1E192537C20032B44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "locationTrivia-Objects/locationTrivia-Objects-Prefix.pch";
+				INFOPLIST_FILE = "locationTrivia-Objects/locationTrivia-Objects-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D83BAD1F192537C20032B44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "locationTrivia-Objects/locationTrivia-Objects-Prefix.pch";
+				INFOPLIST_FILE = "locationTrivia-Objects/locationTrivia-Objects-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D83BAD21192537C20032B44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D5F71C500449CFA47097EC /* Pods-locationTrivia-ObjectsTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/locationTrivia-Objects.app/locationTrivia-Objects";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "locationTrivia-Objects/locationTrivia-Objects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "locationTrivia-ObjectsTests/locationTrivia-ObjectsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D83BAD22192537C20032B44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D5F71C500449CFA47097EC /* Pods-locationTrivia-ObjectsTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/locationTrivia-Objects.app/locationTrivia-Objects";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "locationTrivia-Objects/locationTrivia-Objects-Prefix.pch";
+				INFOPLIST_FILE = "locationTrivia-ObjectsTests/locationTrivia-ObjectsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D83BACEC192537C20032B44E /* Build configuration list for PBXProject "locationTrivia-Objects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83BAD1B192537C20032B44E /* Debug */,
+				D83BAD1C192537C20032B44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D83BAD1D192537C20032B44E /* Build configuration list for PBXNativeTarget "locationTrivia-Objects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83BAD1E192537C20032B44E /* Debug */,
+				D83BAD1F192537C20032B44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D83BAD20192537C20032B44E /* Build configuration list for PBXNativeTarget "locationTrivia-ObjectsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83BAD21192537C20032B44E /* Debug */,
+				D83BAD22192537C20032B44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D83BACE9192537C20032B44E /* Project object */;
+}
