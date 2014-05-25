@@ -12,13 +12,13 @@ In the last lab you dealt with `NSDictionary` object representation of locations
  6. Modify the `searchForLocationName:inLocations:` method to search an `NSArray` of `FISLocation` objects.
  7. Create a new class called `FISTrivia`. This class should have the following properties:
 
-  ```
-  - (NSString *) content
-  - (NSInteger) likes
-  ```
-  
+    ```
+    - (NSString *) content
+    - (NSInteger) likes
+    ```
+
   8. Add an `NSMutableArray` property to `FISLocation` to hold trivia items
-  9. Write a method called `topTrivia` that returns the trivia item with the most likes
+  9. Write a method called `topTrivia` that returns the trivia item with the most likes. Where should this method go?
   10. Create an initializer for `FISTrivia` that takes an argument for all of the properties and sets them appropriately
 
 
