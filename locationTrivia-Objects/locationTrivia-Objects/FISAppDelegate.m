@@ -7,6 +7,7 @@
 //
 
 #import "FISAppDelegate.h"
+#import "FISLocation.h"
 
 @implementation FISAppDelegate
 
@@ -17,60 +18,24 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    NSDictionary *location =  @{@"name": @"Status of Liberty",
-                                @"longitude": @71.324,
-                                @"latitude": @-31.412};
-    NSLog(@"%@",[self shortenLocationNameWithLocation:location ToCount:3]);
-
-    NSLog(@"%@",[self createLocationWithName:@"Joe" Latitude:@32 Longitude:@43]);
     return YES;
 }
 
 
 
-- (NSString *)shortenLocationNameWithLocation:(NSDictionary *)location ToCount:(NSInteger)count
-{
-    NSString *name = location[@"name"];
-    if (count <0) {
-        return name;
-    }
-    return [name substringToIndex:count];
-}
-
-- (NSDictionary *)createLocationWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude
-{
-    return @{@"name":name,
-             @"latitude":latitude,
-             @"longitude":longitude};
-}
-
 -(NSArray *)getLocationNamesWithLocations:(NSArray *)locations
 {
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
-    for (NSDictionary *location in locations) {
-        NSString *name = location[@"name"];
-        [resultArray addObject:name];
+    for (FISLocation *location in locations) {
+        [resultArray addObject:location.name];
     }
-
     return resultArray;
 }
 
-- (BOOL) verifyLocation:(NSDictionary *)location
+- (FISLocation *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
 {
-    if ([location.allKeys count] != 3)
-    {
-        return NO;
-    }
-    if (location[@"name"] && location[@"latitude"] && location[@"longitude"]) {
-        return YES;
-    }
-    return NO;
-}
-
-- (NSDictionary *)searchForLocationName:(NSString *)name inLocations:(NSArray *)locations
-{
-    for (NSDictionary *location in locations) {
-        NSString *locationName = location[@"name"];
+    for (FISLocation *location in locations) {
+        NSString *locationName = location.name;
         if ([locationName isEqualToString:name]) {
             return location;
         }
