@@ -59,27 +59,34 @@ describe(@"FISLocation", ^{
         });
 
         it(@"Should return YES for a valid location", ^{
-            FISLocation *loc = [[FISLocation alloc] initWithName:@"Empire State Building" Latitude:@40.7484 Longitude:@-73.9857];
-            expect(loc.verifyLocation).to.beTruthy();
-        });
-
-        it(@"Should return YES for a valid location", ^{
-            FISLocation *loc = [[FISLocation alloc] initWithName:@"Empire State Building" Latitude:@40.7484 Longitude:@-73.9857];
+            FISLocation *loc = [[FISLocation alloc] init];
+            loc.name = @"Empire State Building";
+            loc.latitude = @40.7484;
+            loc.longitude = @-73.9857;
             expect(loc.verifyLocation).to.beTruthy();
         });
 
         it(@"Should return NO for invalid latitude", ^{
-            FISLocation *loc = [[FISLocation alloc] initWithName:@"Empire State Building" Latitude:@140.7484 Longitude:@-73.9857];
+            FISLocation *loc = [[FISLocation alloc] init];
+            loc.name = @"Empire State Building";
+            loc.latitude = @140.7484;
+            loc.longitude = @-73.9857;
             expect(loc.verifyLocation).to.beFalsy();
         });
 
         it(@"Should return NO for invalid longitude", ^{
-            FISLocation *loc = [[FISLocation alloc] initWithName:@"Empire State Building" Latitude:@40.7484 Longitude:@-1173.9857];
+            FISLocation *loc = [[FISLocation alloc] init];
+            loc.name = @"Empire State Building";
+            loc.latitude = @40.7484;
+            loc.longitude = @-1173.9857;
             expect(loc.verifyLocation).to.beFalsy();
         });
 
         it(@"Should return NO for invalid name", ^{
-            FISLocation *loc = [[FISLocation alloc] initWithName:@"" Latitude:@40.7484 Longitude:@-1173.9857];
+            FISLocation *loc = [[FISLocation alloc] init];
+            loc.name = @"";
+            loc.latitude = @40.7484;
+            loc.longitude = @-73.9857;
             expect(loc.verifyLocation).to.beFalsy();
         });
     });
