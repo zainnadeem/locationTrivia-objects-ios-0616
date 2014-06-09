@@ -1,3 +1,8 @@
+---
+tags: objects, methods, dictionary
+language: objc
+---
+
 #Location Trivia Objects
 
 In the last lab you dealt with `NSDictionary` object representation of locations. Now lets convert these to proper classes and add in trivia items!
