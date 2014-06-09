@@ -25,21 +25,6 @@ describe(@"FISAppDelegate", ^{
     beforeAll(^{
         appDelegate = [[FISAppDelegate alloc] init];
 
-        location = mock([FISLocation class]);
-        [given([location name]) willReturn:@"Empire State Building"];
-        [given([location latitude]) willReturn:@23.432];
-        [given([location longitude]) willReturn:@-34.34];
-
-        location2 = mock([FISLocation class]);
-        [given([location2 name]) willReturn:@"The Flatiron School"];
-        [given([location2 latitude]) willReturn:@34.432];
-        [given([location2 longitude]) willReturn:@-23.67];
-
-        location3 = mock([FISLocation class]);
-        [given([location3 name]) willReturn:@"Statue Of Liberty"];
-        [given([location3 latitude]) willReturn:@78.34];
-        [given([location3 longitude]) willReturn:@92.42];
-        locationsArray = @[location,location2,location3];
     });
     
     beforeEach(^{
@@ -73,7 +58,7 @@ describe(@"FISAppDelegate", ^{
             expect([appDelegate searchForLocationName:@"The Flatiron School" inLocations:locationsArray]).to.beKindOf([FISLocation class]);
         });
 
-        it(@"Should return the appropriate NSDictionary Location", ^{
+        it(@"Should return the appropriate FISLocation Location", ^{
             FISLocation *returnedLocation = [appDelegate searchForLocationName:@"The Flatiron School" inLocations:locationsArray];
            expect(returnedLocation).to.equal(location2);
         });
