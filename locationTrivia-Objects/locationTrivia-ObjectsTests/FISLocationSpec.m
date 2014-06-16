@@ -10,8 +10,6 @@
 #define EXP_SHORTHAND
 #import <Expecta.h>
 #import "FISLocation.h"
-#define MOCKITO_SHORTHAND
-#import <OCMockito.h>
 
 
 SpecBegin(FISLocation)
