@@ -9,6 +9,7 @@ In the last lab you dealt with `NSDictionary` object representation of locations
  3. Create an initializer that takes in the three properties and assigns them correctly
  4. Modify the `getLocationNamesWithLocations` method to take an `NSArray` of `FISLocation` objects and just return their names
  5. Move the `verifyLocation` method to be an instance method for `FISLocation` and still return `YES` or `NO` whether the `FISLocation` has all of it's properties filled out
+ 6. Create a designeated init method for FISLocation.
  6. Modify the `searchForLocationName:inLocations:` method to search an `NSArray` of `FISLocation` objects.
  7. Create a new class called `FISTrivia`. This class should have the following properties:
 
