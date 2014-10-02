@@ -10,8 +10,6 @@
 #define EXP_SHORTHAND
 #import <Expecta.h>
 #import "FISLocation.h"
-#define MOCKITO_SHORTHAND
-#import <OCMockito.h>
 
 
 SpecBegin(FISLocation)
@@ -63,7 +61,7 @@ describe(@"FISLocation", ^{
             loc.name = @"Empire State Building";
             loc.latitude = @40.7484;
             loc.longitude = @-73.9857;
-            expect(loc.verifyLocation).to.beTruthy();
+            expect([loc verifyLocation]).to.beTruthy();
         });
 
         it(@"Should return NO for invalid latitude", ^{
@@ -71,7 +69,7 @@ describe(@"FISLocation", ^{
             loc.name = @"Empire State Building";
             loc.latitude = @140.7484;
             loc.longitude = @-73.9857;
-            expect(loc.verifyLocation).to.beFalsy();
+            expect([loc verifyLocation]).to.beFalsy();
         });
 
         it(@"Should return NO for invalid longitude", ^{
@@ -79,7 +77,7 @@ describe(@"FISLocation", ^{
             loc.name = @"Empire State Building";
             loc.latitude = @40.7484;
             loc.longitude = @-1173.9857;
-            expect(loc.verifyLocation).to.beFalsy();
+            expect([loc verifyLocation]).to.beFalsy();
         });
 
         it(@"Should return NO for invalid name", ^{
@@ -87,7 +85,7 @@ describe(@"FISLocation", ^{
             loc.name = @"";
             loc.latitude = @40.7484;
             loc.longitude = @-73.9857;
-            expect(loc.verifyLocation).to.beFalsy();
+            expect([loc verifyLocation]).to.beFalsy();
         });
     });
 
