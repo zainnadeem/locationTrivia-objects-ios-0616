@@ -26,17 +26,17 @@ describe(@"FISAppDelegate", ^{
         appDelegate = [[FISAppDelegate alloc] init];
 
         location = [[FISLocation alloc] init];
-        location.name = @"The Empire State Building"
+        location.name = @"The Empire State Building";
         location.latitude = @34.23;
         location.longitude = @-43.32;
 
         location2 = [[FISLocation alloc] init];
-        location2.name = @"The Flatiron School"
+        location2.name = @"The Flatiron School";
         location2.latitude = @33.23;
         location2.longitude = @-23.32;
 
         location3 = [[FISLocation alloc] init];
-        location3.name = @"Statue of Liberty"
+        location3.name = @"Statue of Liberty";
         location3.latitude = @13.23;
         location3.longitude = @-13.32;
 
