@@ -5,6 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'locationTrivia-ObjectsTests' do
   pod 'Specta' 
   pod 'Expecta'
+  pod 'Expecta+Collections'
 
 end
 
