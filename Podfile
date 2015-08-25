@@ -1,10 +1,10 @@
-platform :ios, '7.0'
+platform :ios, '8.4'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'locationTrivia-ObjectsTests' do
-  pod 'Specta',     :git=>'git@github.com:specta/specta.git', :branch=>'0.3-wip' 
+  pod 'Specta' 
   pod 'Expecta'
-  pod 'OCMockito'
+
 end
 
