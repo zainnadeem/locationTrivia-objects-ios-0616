@@ -17,7 +17,7 @@
 
 - (NSString *)stringByTruncatingNameToLength:(NSUInteger)length;
 
-- (BOOL)validateLocationData;
+- (BOOL)hasValidData;
 
 - (FISTrivium *)triviumWithMostLikes;
 

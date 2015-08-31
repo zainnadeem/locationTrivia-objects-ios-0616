@@ -12,7 +12,7 @@
 
 - (NSArray *)allLocationNames;
 
-- (FISLocation *)locationWithName:(NSString *)name;
+- (FISLocation *)locationNamed:(NSString *)name;
 
 - (NSArray *)locationsNearLatitude:(CGFloat)latitude
                          longitude:(CGFloat)longitude

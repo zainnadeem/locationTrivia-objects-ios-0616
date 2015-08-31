@@ -61,44 +61,44 @@ describe(@"FISLocation", ^{
         });
     });
     
-    describe(@"validateLocationData", ^{
+    describe(@"hasValidData", ^{
         it(@"should return YES for a location with valid data", ^{
-            expect([empireState validateLocationData]).to.beTruthy();
+            expect([empireState hasValidData]).to.beTruthy();
         });
 
         it(@"should return NO for a latitude greater than 90.0", ^{
             empireState.latitude = 90.01;
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
         
         it(@"should return NO for a latitude less than -90.0", ^{
             empireState.latitude = -90.01;
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
 
         it(@"should return NO for a longitude greater than 180.0", ^{
             empireState.longitude = 180.01;
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
         
         it(@"should return NO for a longitude less than -180.0", ^{
             empireState.longitude = -180.01;
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
         
         it(@"should return NO for a longitude equal to -180.0", ^{
             empireState.longitude = -180.0;
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
 
         it(@"should return NO for a name containing an empty string", ^{
             empireState.name = @"";
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
         
         it(@"should return NO for a name set to 'nil'", ^{
             empireState.name = nil;
-            expect([empireState validateLocationData]).to.beFalsy();
+            expect([empireState hasValidData]).to.beFalsy();
         });
     });
 
@@ -111,6 +111,11 @@ describe(@"FISLocation", ^{
         it(@"should return an 8-letter substring of the location's name when length equals 8", ^{
             NSString *truncatedName = [flatiron stringByTruncatingNameToLength:8];
             expect(truncatedName).to.equal(@"Flatiron");
+        });
+        
+        it(@"should handle an integer argument that exceeds the length of the location's name", ^{
+            NSString *truncatedName = [flatiron stringByTruncatingNameToLength:17];
+            expect(truncatedName).to.equal(@"Flatiron School");
         });
     });
     

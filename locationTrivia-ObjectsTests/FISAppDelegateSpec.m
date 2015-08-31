@@ -42,17 +42,17 @@ describe(@"FISAppDelegate", ^{
         });
     });
 
-    describe(@"locationWithName:", ^{
+    describe(@"locationNamed:", ^{
         it(@"should return a FISLocation object with the correct name", ^{
-            FISLocation *location = [appDelegate locationWithName:flatiron.name];
-            FISLocation *location2 = [appDelegate locationWithName:ladyLiberty.name];
+            FISLocation *location = [appDelegate locationNamed:flatiron.name];
+            FISLocation *location2 = [appDelegate locationNamed:ladyLiberty.name];
             
             expect(location).to.equal(flatiron);
             expect(location2).to.equal(ladyLiberty);
         });
 
         it(@"should return 'nil' if no location with the submitted name is found", ^{
-            FISLocation *location = [appDelegate locationWithName:@"Atlantis"];
+            FISLocation *location = [appDelegate locationNamed:@"Atlantis"];
             expect(location).to.beNil();
        });
     });

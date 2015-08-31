@@ -11,8 +11,6 @@
 
 In the last *Location Trivia* lab you dealt with a representation of locations using `NSDictionary`. Now, increase the power of your programming by storing this information in custom classes instead!
 
-*  Fork and clone this lab.
-
 *  Open the `locationTrivia-objects.xcworkspace` file.
 
 ### I. Create the Custom Classes
@@ -48,7 +46,7 @@ On the `FISLocation` class, declare five methods:
   * `init` — the default initializer that will be overridden,
   * `initWithName:latitude:longitude:` — a designated initializer,
   * `stringByTruncatingNameToLength:` which takes one `NSUInteger` argument called `length` and returns an `NSString`,
-  * `validateLocationData` which takes no arguments and returns a `BOOL`, and
+  * `hasValidData` which takes no arguments and returns a `BOOL`, and
   * `triviumWithMostLikes` which takes no arguments and returns a `FISTrivium` object.
 
 Define the initializers to assign to `self` a call of `[super init]` and return `self`.
@@ -68,7 +66,7 @@ Run the tests with `⌘` `U` to see that they fail.
 
 1. Define `FISTrivium`'s designated initializer.
 
-2. Override `FISTrivium`'s default initializer to call the designated initializer. Have it pass in an empty string (`@""`) for the `content` argument, and `0` (zero) for the `likes` argument.
+2. Override `FISTrivium`'s default initializer to call the designated initializer. Default instances of `FISTrivium` should have an empty string for their `content` and no `likes`.
 
 Run the test in `FISTriviumSpec.m` to check the `FISTrivium` class.
 
@@ -79,14 +77,14 @@ Run the test in `FISTriviumSpec.m` to check the `FISTrivium` class.
 1. Define `FISLocation`'s designated initializer.  
 **Hint:** *Don't forget to set the* `trivia` *property to the initialization of an empty mutable array.*
 
-2. Override `FISLocation`'s default initializer to call the designated initializer. Have it pass in an empty string (`@""`) for the `name` argument, and `0.0` for both the `latitude` and `longitude` arguments.
+2. Override `FISLocation`'s default initializer to call the designated initializer. Default instances of `FISLocation` should have an empty string for their `name` property Have it pass in an empty string for `name`, and coordinates pointing to the intersection of the equator and the prime meridian (i.e. Latitude 0º, Longitude 0º).
 
 #### Write the Method Implementations
 
-1. Define the `stringByTruncatingNameToLength:` method to return a substring of the location's name shortened to the number of characters defined by the `length` argument.  
+1. Define the `stringByTruncatingNameToLength:` method to return a substring of the location's name shortened to the number of characters defined by the `length` argument. This method should handle a `length` argument integer that exceeds the length of the location's `name` string; in such a case, it should just return the location's whole name.  
 **Hint:** `NSString` *has a handy method called* `substringToIndex`.
 
-2. Define the `validateLocationData` method to:
+2. Define the `hasValidData` method to:
   * return `NO` if the `name` property is an empty string or `nil`,
   * return `NO` if the `latitude` property is beyond `-90.0` and `90.0`,
   * return `NO` if the `longitude` property is beyond `-180.0` and `180.0` or if it is equal to `-180.0` (since this longitude conceptually matches the 180º meridian), and
@@ -104,5 +102,5 @@ Run the test in `FISTriviumSpec.m` to check the `FISTrivium` class.
 2. Define the `locationWithName:` method to return a `FISLocation` object whose `name` string property matches the string submitted to the `name` argument. If there isn't a match, this method should return `nil`.  
 **Hint:** *You can accomplish with either a* `for in` *loop &* `if` *statement, or by using* `NSPredicate`.
 
-3.	Define the `locationsNearLatitude:longitude:margin:` method to return an array of all of the locations whose coordinates are near enough to the submitted coordinates to fall within the submitted positive or negative margin submitted in the `margin` argument.  
+3.	Define the `locationsNearLatitude:longitude:margin:` method to return an array of all the locations whose coordinates are within ±`margin` degrees from the given location.  
 **Note:** *This is intended to be a simple implementation of local cartography. The test data only contains locations on Manhattan. You do NOT need to spend time programming for edge cases of detecting locations across the poles or across the 180º meridian. For actual mapping implementations, the Apple framework* `MapKit` *would be used.* 

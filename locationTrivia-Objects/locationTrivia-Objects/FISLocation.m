@@ -25,10 +25,14 @@
 }
 
 - (NSString *)stringByTruncatingNameToLength:(NSUInteger)length {
+    if (length > self.name.length) {
+        return self.name;
+    }
+    
     return [self.name substringToIndex:length];
 }
 
-- (BOOL)validateLocationData {
+- (BOOL)hasValidData {
     if (self.name.length == 0) {
         return NO;
     }

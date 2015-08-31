@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         _content = content;
-        _likes=likes;
+        _likes = likes;
     }
     return self;
 }
