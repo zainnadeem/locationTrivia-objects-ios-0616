@@ -1,91 +1,85 @@
-//
 //  FISAppDelegateSpec.m
-//  locationTrivia-Dictionaries
-//
-//  Created by Joe Burgess on 5/14/14.
-//  Copyright 2014 Joe Burgess. All rights reserved.
-//
 
 #import "Specta.h"
 #define EXP_SHORTHAND
 #import <Expecta.h>
+#import <EXPMatchers+equalInAnyOrder.h>
 #import "FISAppDelegate.h"
 #import "FISLocation.h"
-#define MOCKITO_SHORTHAND
-#import <OCMockito.h>
+
 
 SpecBegin(FISAppDelegate)
 
 describe(@"FISAppDelegate", ^{
+    
     __block FISAppDelegate *appDelegate;
-    __block FISLocation *location;
-    __block FISLocation *location2;
-    __block FISLocation *location3;
-    __block NSArray *locationsArray;
-    beforeAll(^{
-        appDelegate = [[FISAppDelegate alloc] init];
-
-        location = [[FISLocation alloc] init];
-        location.name = @"The Empire State Building";
-        location.latitude = @34.23;
-        location.longitude = @-43.32;
-
-        location2 = [[FISLocation alloc] init];
-        location2.name = @"The Flatiron School";
-        location2.latitude = @33.23;
-        location2.longitude = @-23.32;
-
-        location3 = [[FISLocation alloc] init];
-        location3.name = @"Statue of Liberty";
-        location3.latitude = @13.23;
-        location3.longitude = @-13.32;
-
-        locationsArray = @[location, location2, location3];
-
-    });
+    __block FISLocation *empireState;
+    __block FISLocation *flatiron;
+    __block FISLocation *ladyLiberty;
     
     beforeEach(^{
+        empireState = [[FISLocation alloc] initWithName:@"Empire State Building"
+                                               latitude:40.748729
+                                              longitude:-73.985779  ];
 
+        flatiron = [[FISLocation alloc] initWithName:@"Flatiron School"
+                                            latitude:40.705545
+                                           longitude:-74.013975];
+
+        ladyLiberty = [[FISLocation alloc] initWithName:@"Statue of Liberty"
+                                               latitude:40.689481
+                                              longitude:-74.044441];
+
+        appDelegate = [[FISAppDelegate alloc] init];
+        appDelegate.locations = [[NSMutableArray alloc] initWithObjects:empireState, flatiron, ladyLiberty, nil];
     });
 
-
-    describe(@"Get Location Names With Location", ^{
-        it(@"Should have a method called getLocationNamesWithLocations", ^{
-            expect(appDelegate).to.respondTo(@selector(getLocationNamesWithLocations:));
-        });
-
-        it(@"Should get the locations", ^{
-            NSArray *locationNames = [appDelegate getLocationNamesWithLocations:locationsArray];
-            expect(locationNames).to.contain(location.name);
-            expect(locationNames).to.contain(location2.name);
-            expect(locationNames).to.contain(location3.name);
-        });
-
-        it(@"Should return an NSArray", ^{
-            expect([appDelegate getLocationNamesWithLocations:locationsArray]).to.beKindOf([NSArray class]);
+    describe(@"allLocationNames", ^{
+        it(@"should return an array containing all of the location names in the 'locations' array", ^{
+            NSArray *allLocationNames = [appDelegate allLocationNames];
+            NSArray *expectedNames = @[empireState.name, flatiron.name, ladyLiberty.name];
+            expect(allLocationNames).to.equal(expectedNames);
         });
     });
 
-    describe(@"Search for Location Name", ^{
-        it(@"Should have a method called searchForLocationName:inLocations:", ^{
-            expect(appDelegate).to.respondTo(@selector(searchForLocationName:inLocations:));
+    describe(@"locationNamed:", ^{
+        it(@"should return a FISLocation object with the correct name", ^{
+            FISLocation *location = [appDelegate locationNamed:flatiron.name];
+            FISLocation *location2 = [appDelegate locationNamed:ladyLiberty.name];
+            
+            expect(location).to.equal(flatiron);
+            expect(location2).to.equal(ladyLiberty);
         });
 
-        it(@"Should return a FISLocation", ^{
-            expect([appDelegate searchForLocationName:@"The Flatiron School" inLocations:locationsArray]).to.beKindOf([FISLocation class]);
-        });
-
-        it(@"Should return the appropriate FISLocation Location", ^{
-            FISLocation *returnedLocation = [appDelegate searchForLocationName:@"The Flatiron School" inLocations:locationsArray];
-           expect(returnedLocation).to.equal(location2);
-        });
-
-        it(@"Should return nil if no location is found", ^{
-           FISLocation *returnedLocation = [appDelegate searchForLocationName:@"BAD LOCATION" inLocations:locationsArray];
-            expect(returnedLocation).to.beNil();
+        it(@"should return 'nil' if no location with the submitted name is found", ^{
+            FISLocation *location = [appDelegate locationNamed:@"Atlantis"];
+            expect(location).to.beNil();
        });
     });
-
+    
+    describe(@"locationsNearLatitude:longitude:margin:", ^{
+        it(@"should return an array with just flatiron when its coordinates are submitted with zero margin", ^{
+            NSArray *locations = [appDelegate locationsNearLatitude:40.705545
+                                                          longitude:-74.013975
+                                                             margin:0.0];
+            expect(locations).to.equal(@[flatiron]);
+        });
+        
+        it(@"should return an array with flatiron and ladyLiberty when the coordinates are submitted with 0.02 margin" , ^{
+            NSArray *locations = [appDelegate locationsNearLatitude:40.705545
+                                                          longitude:-74.013975
+                                                             margin:0.035];
+            
+            expect(locations).to.equalInAnyOrder(@[flatiron, ladyLiberty]);
+        });
+        
+        it(@"should return an array with flatiron, ladyLiberty, and empireState when the coordinates are submitted with 0.05 margin" , ^{
+            NSArray *locations = [appDelegate locationsNearLatitude:40.705545
+                                                          longitude:-74.013975
+                                                             margin:0.05];
+            expect(locations).to.equalInAnyOrder(@[flatiron, ladyLiberty, empireState]);
+        });
+    });
 });
 
 SpecEnd
