@@ -36,7 +36,7 @@ On the `FISAppDelegate` class add a public property:
 On the `FISAppDelegate` class, declare three methods:
 
   * `allLocationNames` that takes no arguments and returns an `NSArray`,
-  * `locationWithName:` that takes one `NSString` argument called `name` and returns a `FISLocation` object, and
+  * `locationNamed:` that takes one `NSString` argument called `name` and returns a `FISLocation` object, and
   * `locationsNearLatitude:longitude:margin:` that takes three `CGFloat` arguments called `latitude`, `longitude`, and `margin`, and returns an `NSArray`.
 
 Define these methods to return `nil`.
@@ -99,7 +99,7 @@ Run the test in `FISTriviumSpec.m` to check the `FISTrivium` class.
 
 1. Define the `allLocationNames` method to return an array of all of the `name` string properties of the `FISLocation` objects held in the `locations` array property.
 
-2. Define the `locationWithName:` method to return a `FISLocation` object whose `name` string property matches the string submitted to the `name` argument. If there isn't a match, this method should return `nil`.  
+2. Define the `locationNamed:` method to return a `FISLocation` object whose `name` string property matches the string submitted to the `name` argument. If there isn't a match, this method should return `nil`.  
 **Hint:** *You can accomplish with either a* `for in` *loop &* `if` *statement, or by using* `NSPredicate`.
 
 3.	Define the `locationsNearLatitude:longitude:margin:` method to return an array of all the locations whose coordinates are within ±`margin` degrees from the given location.  
