@@ -1,24 +1,17 @@
 PODS:
-  - Expecta (0.2.4)
-  - OCHamcrest (3.0.1)
-  - OCMockito (1.2.0):
-    - OCHamcrest (~> 3.0)
-  - Specta (0.2.99)
+  - Expecta (1.0.2)
+  - Expecta+Collections (1.0.1):
+    - Expecta
+  - Specta (1.0.3)
 
 DEPENDENCIES:
   - Expecta
-  - OCMockito
-  - Specta (from `git@github.com:specta/specta.git`, branch `0.3-wip`)
-
-EXTERNAL SOURCES:
-  Specta:
-    :branch: 0.3-wip
-    :git: git@github.com:specta/specta.git
+  - Expecta+Collections
+  - Specta
 
 SPEC CHECKSUMS:
-  Expecta: 112bcafa2304ee0f3c5e586505f24555a47b25d5
-  OCHamcrest: 207233b7d7a44dadd66aca398947cc7e029c9be5
-  OCMockito: e4b9564b2b9165a143fd54a41dbfb55595699624
-  Specta: 85ea870d8886e0bbf92ed8df112823bf3eb07322
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  Expecta+Collections: 6fae193f42cb98dab08fe6a1ef579e97c65aa56a
+  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
 
-COCOAPODS: 0.34.1
+COCOAPODS: 0.38.2
