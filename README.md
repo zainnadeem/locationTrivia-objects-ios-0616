@@ -104,4 +104,4 @@ Run the test in `FISTriviumSpec.m` to check the `FISTrivium` class.
 
 3.	Define the `locationsNearLatitude:longitude:margin:` method to return an array of all the locations whose coordinates are within ±`margin` degrees from the given location.  
 **Note:** *This is intended to be a simple implementation of local cartography. The test data only contains locations on Manhattan. You do NOT need to spend time programming for edge cases of detecting locations across the poles or across the 180º meridian. For actual mapping implementations, the Apple framework* `MapKit` *would be used.* 
-<a href='https://learn.co/lessons/locationTrivia-objects' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/locationTrivia-objects' title='Location Trivia Objects'>Location Trivia Objects</a> on Learn.co and start learning to code for free.</p>
